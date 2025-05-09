@@ -30,8 +30,8 @@ EXPOSE 5901 22
 WORKDIR /workspace
 
 # Copiar script de arranque
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
+COPY vnc.sh /vnc.sh
+RUN chmod +x /vnc.sh
 
 # Instalación de VS Code
 RUN wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg && \
